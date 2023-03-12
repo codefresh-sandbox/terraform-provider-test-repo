@@ -4,11 +4,11 @@ steps:
     test:
       image: alpine
       when:  
-        steps:
-          any:
-            - name: test1
-              on:
-                - failure
-            - name: test2
-              on:
-                - failure
+          steps:
+            any:
+              - name: test1
+                on:
+                  - failure
+              - name: test2
+                on:
+                  - failure
