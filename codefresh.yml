@@ -1,0 +1,13 @@
+version: "1.0"
+steps:
+    test:
+      image: alpine
+      when:  
+        steps:
+          any:
+            - name: test1
+              on:
+                - failure
+            - name: test2
+              on:
+                - failure
